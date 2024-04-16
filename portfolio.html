@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>My Portofolio</title>
+	<title>My Portfolio</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- bootstrap CDN -->
@@ -61,13 +61,113 @@
 		{
 			width: 100%;
 		}
+		.read-more-btn,.read-less-btn 
+		{
+			width: 120px; 
+			background-color: green; 
+			color: #fff; 
+			border: none; 
+			font-size: 14px;     
+		}
+		.read-less-btn 
+		{
+			background-color: red; 
+		}
+		.btn
+		{
+			align: center;
+		}
+		/* skills section css */
+		.servicesText.card 
+		{
+			height: 180px;
+			
+			cursor: pointer;
+		}
+		.servicesIcon 
+		{
+			font-size: 36px;
+    			text-align: center;
+			width: 100%;
+		}
+		.card-title 
+		{
+			text-align: center;
+		}
+		.card:hover .servicesIcon 
+		{
+			color: #008000;
+		}
+		.servicesText:hover 
+		{
+			border: 1px solid #008000;
+		}
+
+		/* project */
+		.card1
+		{
+			display: inline-block;
+			border: 2px solid black;
+			width: 500px;
+			height: 450px;
+			transition:0.5s;
+			margin: 10px;
+			padding: 10px;
+		}
+		.card1:hover
+		{
+			transform:scale(1.1,1.1);
+			z-index: 2;
+		}
+		/* maps */
+		#embedmap-canvas img
+		{
+			max-width:none!important;
+			background:none!important;
+			font-size: inherit;
+			font-weight:inherit;
+		}
+
+		/* social media icons styling */
+		.social-icons 
+		{
+			font-size: 36px;
+			cursor: pointer;
+		}
+		.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover 
+		{
+			color: red;
+		}
+		.fab 
+		{
+			color: green;
+		}
+		/* footer styling */
+		#footer 
+		{
+			background-color: black;
+			text-align: center;
+			color: white;
+		}
+		/* spacing on all sections */
+		#about, #services, #portfolio, #contact 
+		{
+			margin-top: 2rem;
+			padding-top: 2rem;
+		}
+		#contact 
+		{
+			padding-bottom: 2rem;
+		}
 	</style>
 </head>
 <body>
 	<!--navbar-->
 	<nav class="navbar navbar-expand-lg fixed-top navbarScroll">
 	<div class="container">
-		
+		<a class="navbar-brand" href="#">Portfolio</a>
+	        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item active">
@@ -77,10 +177,10 @@
 					<a class="nav-link" href="#about">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#services">Services</a>
+					<a class="nav-link" href="#skills">Skills</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#portfolio">Portfolio</a>
+					<a class="nav-link" href="#projects">Projects</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#contact">Contact</a>
@@ -96,7 +196,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-text">
 					<h2 class="bg_title">Hi, I am Sasi Priya</h2>
-					<p class="bg_desc">I am a Java and Web Developer</p>
+					<p class="bg_desc">I am a Full stack Java Developer and Web Developer</p>
 				</div>
 			</div>
 		</div>
@@ -105,32 +205,232 @@
 	<!-- about section-->
 	<section id="about">
 		<div class="container mt-4 pt-4">
-			<h1 class="text-center">About Me</h1>
-			<div class="row mt-4">
-				<div class="col-lg-4">
-					<img src="me.jpg" class= "imageAboutPage" alt="">
+        		<h1 class="text-center">About Me</h1>
+        		<div class="row mt-4">
+        			<div class="col-lg-4">
+                			<img src="me.jpg" class="imageAboutPage" alt="">
 				</div>
 				<div class="col-lg-8">
 					<div class="row mt-3">
-						<div class="col-md">
-							<ul>
-								<li><b>Name:</b> Kalavakunta Sasi Priya</li>
-								<li><b>Occupation:</b> Java and Web Developer</li>
-								<li><b>Mobile No:</b> 9908238609</li>
-								<li><b>Email:</b> sasipriyakalavakunta@gmail.com</li>
-								<li><b>LinkedIn:</b> https://www.linkedin.com/in/kalavakunta-sasipriya-955ba3280 </li>
-								<li><b>GitHub:</b> https://github.com/kalavakuntasasipriya</li>
-							</ul>
+                    				<div class="col-md">
+                        				<ul>
+                            					<li><b>Name:  </b> Kalavakunta Sasi Priya</li>
+					                        <li><b>Occupation:  </b> Java and Web Developer</li>
+					                        <li><b>Mobile No:  </b> 9908238609</li>
+					                        <li><b>Email:  </b> <a href="sasipriyakalavakunta@gmail.com">sasipriyakalavakunta@gmail.com</a></li>
+					                        <li><b>LinkedIn:  </b> <a href="https://www.linkedin.com/in/kalavakunta-sasipriya-955ba3280">https://www.linkedin.com/in/kalavakunta-sasipriya-955ba3280</a></li>
+                            					<li><b>GitHub:  </b> <a href="https://github.com/kalavakuntasasipriya">https://github.com/kalavakuntasasipriya</a></li>
+                        				</ul>
+                    				</div>
+                			</div>
+                			<div class="row mt-3 additional-content" style="display: none;">
+                    				<p> I am currently a third-year student pursuing a Bachelor of Technology in Computer Science and Engineering. My passion lies in Java programming and web development. My skills include programming languages like Java, C, Python, as well as data management skills like SQL and version control systems like GIT. I enjoy learning new things and getting better at creating cool websites that people can use easily. In addition to my academic pursuits, I actively seek opportunities to contribute to internship opportunities.</p>
+                			</div>
+					<div class="row mt-3 button-container text-center">
+						<div class="col">
+							<button class="btn btn-secondary read-more-btn">Read More</button>
+							<button class="btn btn-secondary read-less-btn">Read Less</button>
 						</div>
-					
-					</div>	
-					<div class="row mt-3">
-						<p> I am currently a third-year student pursuing a Bachelor of Technology in Computer Science and Engineering. My passion lies in Java programming and web development. My skills are programming languages like Java, C , Python. Data management skills like SQL. version control systems like GIT. I enjoy learning new things and getting better at creating cool websites that people can use easily. In addition to my academic pursuits, I actively seek opportunities to contribute to internship opportunities.</p>
 					</div>
+            			</div>
+        		</div>
+    		</div>
+	</section>
+	<!-- Skills section -->
+    	<section id="skills">
+        	<div class="container">
+            	<h1 class="text-center">Skills</h1>
+            		<div class="row">
+                		<div class="col-lg-4 mt-4">
+                    			<div class="card servicesText">
+                        			<div class="card-body">
+                            				<i class="fas servicesIcon fa-clock"></i>
+                            				<h4 class="card-title mt-3">Programming Skills</h4>
+                            				<p class="card-text mt-3">Java , Basis of Python and C</p>
+                        			</div>
+                    			</div>  
+                		</div>
+                		<div class="col-lg-4 mt-4">
+                    			<div class="card servicesText">
+						<div class="card-body">
+							<i class='fas servicesIcon fa-layer-group'></i>
+                            				<h4 class="card-title mt-3">Web Development</h4>
+                            				<p class="card-text mt-3">HTML , CSS , JavaScript , Bootstrap </p>
+                        			</div>
+                    			</div>  
+                		</div>
+				<div class="col-lg-4 mt-4">
+                    			<div class="card servicesText">
+                        			<div class="card-body">
+                            				<i class='far servicesIcon fa-check-circle'></i>
+                            				<h4 class="card-title mt-3">Database Management</h4>
+                            				<p class="card-text mt-3">SQL</p>
+                        			</div>
+                    			</div>  
+                		</div>
+            		</div>
+			<div class="row">
+                		<div class="col-lg-4 mt-4">
+                    			<div class="card servicesText">
+                        			<div class="card-body">
+                            				<i class='fas servicesIcon fa-search'></i>
+                            				<h4 class="card-title mt-3">Version Control System</h4>
+                            				<p class="card-text mt-3">Git	</p>
+                       				</div>
+                    			</div>  
+                		</div>
+				<div class="col-lg-4 mt-4">
+                    			<div class="card servicesText">
+                        			<div class="card-body">
+                           				<i class='fas servicesIcon fa-shield-alt'></i>
+                            				<h4 class="card-title mt-3">Soft Skills</h4>
+                            				<p class="card-text mt-3">Team work , Leadership </p>
+                        			</div>
+                    			</div>  
+                		</div>
+            		</div>
+        	</div>
+    	</section>
+	<!-- projects section-->
+	<section id="projects">
+        	<div class="container mt-3">
+        		<h1 class="text-center">Projects</h1> <br>
+
+        		<div class="row">
+        			<div class="col">
+        				<div class="card1">
+        					<img class="card1-img-top" src="travelagency.png" alt="Card1 image" style="width:100%">
+        					<div class="card1-body">
+							<h4 class="card1-title"><center>Travel Agency</center></h4>
+                            				<p class="card1-text">The Travel Agency project, which primarily focuses on facilitating vehicals mainly car rentals and offering associated services to its customers. </p>
+                            				<div class="text-center">
+                                				<a href="https://kalavakuntasasipriya.github.io/Travel_Agency/web/index.html" target="_blank" class="btn btn-success">Link</a>
+                            				</div>
+                        			</div>
+                    			</div>
+                		</div>
+                		<div class="col">
+                    			<div class="card1 portfolioContent">
+                       				<img class="card1-img-top" src="tuneflow.png" alt="Card image" style="width:100%">
+                        			<div class="card1-body">
+                            				<h4 class="card1-title"><center>Tune Flow (Music Tutorials)</center></h4>
+                            				<p class="card1-text">Music Tutorials project,where we can listen music and to see some info about singers and to enroll in a singing competion and with login and signup pages.</p>
+                            				<div class="text-center">
+                                				<a href="https://kalavakuntasasipriya.github.io/TuneFlow_MusicTutorials/website.html" target="_blank" class="btn btn-success">Link</a>
+                            				</div>
+                        			</div>
+                    			</div>
+               			</div>
+            		</div>
+            		<br><br>
+            		<div class="row">
+                		<div class="col">
+                    			<div class="card1 portfolioContent">
+                        			<img class="card1-img-top" src="onlinehealthclinic.png" alt="Card image" style="width:100%">
+                        			<div class="card1-body">
+                            				<h4 class="card1-title">Online Health Clinic</h4>
+                            				<p class="card1-text">Online health clinic describes featuring information about doctors, services, appointment booking. This is a practical solution for healthcare providers to reach patients online.</p>
+                            				<div class="text-center">
+                                				<a href="https://kalavakuntasasipriya.github.io/Online_health_clinic/home.html" target="_blank" class="btn btn-success">Link</a>
+                            				</div>
+                        			</div>
+                    			</div>
+                		</div>
+            		</div>
+		</div>
+ 	</section>
+
+	<!-- contact section-->
+	<section id="contact">
+		<div class="container mt-3 contactContent">
+        		<h1 class="text-center">Contact Me</h1>
+			<div class="row mt-4">
+				<div class="col-lg-6">
+			                <!-- Embedded Google Map -->
+                			<div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+                				<div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                				        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887426.834997759!2d78.02022610491985!3d14.443097559295899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bf946d6d8e506db%3A0xe5a312e87f4a7172!2sKadapa%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1618927782808!5m2!1sen!2sin"></iframe>
+			                	</div>
+			              			<a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+                			</div>
+            			</div>
+				<div class="col-lg-6">
+					<!-- Form fields -->
+					<form id="contactForm" >
+						<input type="text" class="form-control form-control-lg" placeholder="Name" required>
+						<input type="email" class="form-control mt-3" placeholder="Email" required>
+						<input type="text" class="form-control mt-3" placeholder="Subject" required>
+    						<div class="mb-3 mt-3">
+							<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details" required></textarea>
+						</div>
+						<button type="submit" class="btn btn-success mt-3">Contact Me</button>
+					</form>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- footer section -->
+	<footer id="footer">
+    		<div class="container-fluid">
+			<div class="row">
+				<div class="col-4">
+        				<div class="contact-info mt-4">
+            					<h3>Contact Me</h3><br>
+            					<p>Email: sasipriyakalavakunta@gmail.com</p>
+            					<p>Phone: 9908238609</p>
+            					<p>Address: Yerrepalli, Tirupathi, India</p>
+        				</div>
+				</div>
+				<div class="col-4">
+        				<div class="social-icons mt-4">
+						<h3>Follow Me</h3><br>
+            					<a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+            					<a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            					<a href="https://www.twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+            					<a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            					<a href="https://www.github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        				</div>
+        			</div>
+				<div class="col-4">
+					<div class="additional-info mt-4">
+						<h3>Useful Links</h3><br>
+						<ul class="useful">
+							<a class="nav-link" href="#home">Home</a>
+							<a class="nav-link" href="#about">About</a>
+							<a class="nav-link" href="#skills">Skills</a>
+							<a class="nav-link" href="#projects">Projects</a>
+							<a class="nav-link" href="#contact">Contact</a>
+						</ul>
+        				</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 
 </body>
+	<script>
+		//readmore and readless button in about section
+		document.querySelector('.read-less-btn').style.display = 'none';
+		document.querySelector('.read-more-btn').addEventListener('click', function() 
+		{
+			document.querySelector('.additional-content').style.display = 'block';
+			document.querySelector('.read-more-btn').style.display = 'none';
+			document.querySelector('.read-less-btn').style.display = 'inline-block';
+		});
+
+		document.querySelector('.read-less-btn').addEventListener('click', function() 
+		{
+			document.querySelector('.additional-content').style.display = 'none';
+			document.querySelector('.read-more-btn').style.display = 'inline-block';
+			document.querySelector('.read-less-btn').style.display = 'none';
+		});
+		//contact
+		document.getElementById("contactForm").addEventListener("submit", function(event) 
+		{
+			event.preventDefault();
+			alert("Thank you! We will contact you soon.");
+			document.getElementById("contactForm").submit();
+		});
+	</script>
 </html>
